@@ -7,7 +7,8 @@ A complete platform for managing theatrical spectacles for schools, associations
 This platform consists of two main components:
 
 ### 📱 Website (`/website`)
-- **Public-facing EDJS website** for spectacle discovery and booking
+- **Public-facing EDJS website** with `index.html` as homepage
+- **Complete spectacle discovery and booking platform**
 - **Static HTML/CSS/JS** with Supabase integration
 - **Authentication system** with role-based access
 - **Real-time spectacle synchronization**
@@ -82,6 +83,7 @@ npm run dev
 cd ../website
 # Update assets/js/supabase-config.js with your Supabase credentials
 # Serve with any static server (Python, Node, etc.)
+# The homepage is index.html which will be served automatically
 python -m http.server 8000
 ```
 
