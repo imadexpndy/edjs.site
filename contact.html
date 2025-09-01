@@ -477,14 +477,14 @@
             <div class="col-auto">
               <div class="vs-header__action">
                 <div class="vs-header__right d-none d-md-inline-flex" style="display: flex; gap: 15px; align-items: center;">
-                  <a href="registration.html" class="auth-btn login-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #BDCF00; border: 2px solid #BDCF00; padding: 10px 20px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                  <button class="auth-btn login-btn" onclick="if(typeof authManager !== 'undefined' && authManager.showLoginModal) { authManager.showLoginModal(); } else { window.open('http://localhost:3000/auth?mode=login', '_blank'); }" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #BDCF00; border: 2px solid #BDCF00; padding: 10px 20px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">
                     <i class="fas fa-user-circle"></i>
                     Se connecter
-                  </a>
-                  <a href="registration.html" class="auth-btn register-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: #BDCF00; color: white; border: 2px solid #BDCF00; padding: 10px 20px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                  </button>
+                  <button class="auth-btn register-btn" onclick="window.open('http://localhost:3000/auth?mode=register', '_blank');" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: #BDCF00; color: white; border: 2px solid #BDCF00; padding: 10px 20px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">
                     <i class="fas fa-star"></i>
                     S'inscrire
-                  </a>
+                  </button>
                 </div>
                 <button class="vs-menu-toggle style2 d-inline-block d-lg-none">
                   <i class="fal fa-bars"></i>
