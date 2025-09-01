@@ -381,8 +381,16 @@ class AuthManager {
 
 // Initialize auth manager when DOM is loaded
 let authManager;
-document.addEventListener('DOMContentLoaded', function() {
+
+// Initialize immediately if DOM is already loaded, otherwise wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAuthManager);
+} else {
+    initAuthManager();
+}
+
+function initAuthManager() {
     authManager = new AuthManager();
-    // Make it globally available for testing
+    // Make it globally available
     window.authManager = authManager;
-});
+}
