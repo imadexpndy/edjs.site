@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/website/index.html" },
+    { "source": "/spectacles", "destination": "/website/spectacles.html" },
+    { "source": "/about", "destination": "/website/about.html" },
+    { "source": "/contact", "destination": "/website/contact.html" },
+    { "source": "/gallery", "destination": "/website/gallery.html" },
+    { "source": "/blog", "destination": "/website/blog.html" },
+    { "source": "/partners", "destination": "/website/partners.html" },
+    { "source": "/registration", "destination": "/website/registration.html" },
+    { "source": "/assets/(.*)", "destination": "/website/assets/$1" },
+    { "source": "/(.*)", "destination": "/website/$1" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
